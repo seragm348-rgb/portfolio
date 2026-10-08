@@ -1,0 +1,7 @@
+<!-- LOGO PLACEHOLDER — replace this file with your real logo (keep the name assets/logo.svg).
+     It is used by the navbar, footer and favicon; regenerate assets/og-image.png afterwards (see README). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SA logo placeholder">
+  <rect width="64" height="64" rx="16" fill="#0a0a0b"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="#ffffff" stroke-opacity=".18"/>
+  <text x="32" y="41" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#f2f2f0" letter-spacing="-1">SA</text>
+</svg>

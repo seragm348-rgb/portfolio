@@ -1,0 +1,24 @@
+# Sanity checks on every push / PR. GitHub Pages keeps deploying from the main branch.
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Required files
+        run: |
+          for f in index.html styles.css main.js content.js assets/logo.svg assets/profile.jpg assets/og-image.png Serag_Mohamed_CV.pdf; do
+            test -f "$f" || { echo "missing $f"; exit 1; }
+          done
+      - name: JS syntax
+        run: node --check main.js && node --check content.js
