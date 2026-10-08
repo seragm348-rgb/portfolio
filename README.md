@@ -10,7 +10,7 @@ Static site, no build step, no frameworks. Ready for GitHub Pages.
 | `main.js` | Behaviour: theme, EN/AR, starfield, 3D, case studies, terminal, nav scroll-spy, form |
 | `assets/logo.svg` | **Logo — single swap location** (navbar, footer, favicon) |
 | `assets/og-image.png` | 1200×630 social image, regenerate with `python3 make_og.py` after swapping the logo |
-| `.github/workflows/ci.yml` | GitHub Actions checks on every push/PR (powers the CI badge) |
+| `.github/workflows/ci.yml` | GitHub Actions checks on every push/PR (powers the CI badge) — add it via GitHub's web UI: Add file → Create new file → paste |
 
 ## Deploy (GitHub Pages)
 Pages deploys from the `main` branch root (Settings → Pages → Deploy from a branch). Merging to `main` publishes the site; the `ci` workflow checks files and JS syntax on every push/PR.

@@ -18,7 +18,7 @@ window.CONTENT = {
     // Contact form backend. Create a free form at https://formspree.io and paste its endpoint,
     // e.g. 'https://formspree.io/f/abcdwxyz'. Empty = form falls back to opening the mail client.
     formEndpoint: '',
-    // CI badge: after pushing .github/workflows/deploy.yml, this URL renders the live status.
+    // CI badge: live once .github/workflows/ci.yml (in the zip) is added to the repo.
     ciBadge: 'https://github.com/seragm348-rgb/portfolio/actions/workflows/ci.yml/badge.svg',
     ciLink: 'https://github.com/seragm348-rgb/portfolio/actions',
     hosting: { en: 'Hosted on GitHub Pages', ar: 'مستضاف على GitHub Pages' } // or 'S3 + CloudFront'
