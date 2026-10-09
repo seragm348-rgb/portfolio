@@ -5,6 +5,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Serag Mohamed Abdelkareem Abotaleb | Cloud &amp; Infrastructure Engineer</title>
 <meta name="description" content="Aspiring Infrastructure &amp; Platform Engineer building secure, scalable cloud infrastructure through AWS, networking, Linux, and DevOps.">
+<link rel="canonical" href="https://seragm348-rgb.github.io/portfolio/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seragm348-rgb.github.io/portfolio/">
+<meta property="og:title" content="Serag Mohamed Abdelkareem Abotaleb | Cloud &amp; Infrastructure Engineer">
+<meta property="og:description" content="Aspiring Infrastructure &amp; Platform Engineer building secure, scalable cloud infrastructure through AWS, networking, Linux, and DevOps.">
+<meta property="og:image" content="/portfolio/og-image.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://seragm348-rgb.github.io/portfolio/">
+<meta name="twitter:title" content="Serag Mohamed Abdelkareem Abotaleb | Cloud &amp; Infrastructure Engineer">
+<meta name="twitter:description" content="Aspiring Infrastructure &amp; Platform Engineer building secure, scalable cloud infrastructure through AWS, networking, Linux, and DevOps.">
+<meta name="twitter:image" content="/portfolio/og-image.png">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Serag Mohamed Abdelkareem Abotaleb",
+  "alternateName": ["Serag Abotaleb", "Serag Mohamed"],
+  "jobTitle": "Cloud & Infrastructure Engineer",
+  "description": "Aspiring Infrastructure & Platform Engineer building secure, scalable cloud infrastructure through AWS, networking, Linux, and DevOps.",
+  "url": "https://seragm348-rgb.github.io/portfolio/",
+  "email": "mailto:seragdevops@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/serag-mohamed/"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tanta",
+    "addressCountry": "Egypt"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Horus University",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New Damietta",
+      "addressCountry": "Egypt"
+    }
+  },
+  "knowsAbout": [
+    "Cloud Infrastructure",
+    "AWS",
+    "Networking",
+    "Linux",
+    "DevOps",
+    "Cisco Packet Tracer",
+    "IAM",
+    "EC2",
+    "S3"
+  ]
+}
+</script>
 <style>
   :root{
     --bg:#f1f1ef;
@@ -247,12 +304,51 @@
   h2{font-size:clamp(30px,4vw,44px); max-width:640px;}
   .lede{color:var(--text-dim); font-size:17px; max-width:480px; margin-top:16px;}
 
+  /* ---------- ACCESSIBILITY & FOCUS STYLES ---------- */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 1000;
+    padding: 10px 18px;
+    background: var(--accent);
+    color: var(--on-accent);
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: top 0.2s var(--ease);
+  }
+  .skip-link:focus {
+    top: 16px;
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  .tab:focus-visible,
+  .skill-chip:focus-visible,
+  .tool-card:focus-visible,
+  .proj-card:focus-visible,
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible,
+  .cta-btn:focus-visible,
+  .icon-btn:focus-visible,
+  .field input:focus-visible,
+  .field textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
   /* reveal on scroll */
   .reveal{opacity:0; transform:translateY(18px); transition:opacity 1s var(--ease-slow), transform 1s var(--ease-slow);}
   .reveal.in{opacity:1; transform:translateY(0);}
   @media (prefers-reduced-motion: reduce){
     .reveal{transition:opacity .2s linear; transform:none;}
     *{animation-duration:.001s !important; animation-iteration-count:1 !important;}
+    .hero-photo img{ transform:none !important; transition:none !important; }
+    .scroll-hint .line{ animation:none !important; }
   }
 
   /* ---------- NAVBAR ---------- */
@@ -970,6 +1066,8 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to main content</a>
+
 <div id="cursor"><span class="lbl">VIEW</span></div>
 <canvas id="wireframe-canvas" aria-hidden="true"></canvas>
 
@@ -1006,6 +1104,9 @@
     </div>
   </div>
 </header>
+
+<!-- MAIN CONTENT WRAPPER FOR ACCESSIBILITY -->
+<main id="main">
 
 <!-- HERO -->
 <section id="home" class="hero">
@@ -1197,12 +1298,12 @@
       <h2 data-i18n="skills.h2">Tools I've actually put my hands on</h2>
     </div>
     <div class="tool-cluster reveal" data-stagger>
-      <div class="tool-card" data-brand="aws"><b>AWS</b><span data-i18n="tools.handsOn">Hands-on</span></div>
-      <div class="tool-card" data-brand="linux"><b>Linux</b><span data-i18n="tools.handsOn">Hands-on</span></div>
-      <div class="tool-card" data-brand="network"><b data-i18n="tools.networking">Networking</b><span data-i18n="tools.handsOn">Hands-on</span></div>
-      <div class="tool-card" data-brand="cisco"><b>Packet Tracer</b><span data-i18n="tools.handsOn">Hands-on</span></div>
-      <div class="tool-card" data-brand="iam"><b>IAM</b><span data-i18n="tools.handsOn">Hands-on</span></div>
-      <div class="tool-card" data-brand="git"><b>Git / GitHub</b><span data-i18n="tools.learning">Learning</span></div>
+      <div class="tool-card" role="button" tabindex="0" aria-label="AWS" data-brand="aws"><b>AWS</b><span data-i18n="tools.handsOn">Hands-on</span></div>
+      <div class="tool-card" role="button" tabindex="0" aria-label="Linux" data-brand="linux"><b>Linux</b><span data-i18n="tools.handsOn">Hands-on</span></div>
+      <div class="tool-card" role="button" tabindex="0" aria-label="Networking" data-brand="network"><b data-i18n="tools.networking">Networking</b><span data-i18n="tools.handsOn">Hands-on</span></div>
+      <div class="tool-card" role="button" tabindex="0" aria-label="Packet Tracer" data-brand="cisco"><b>Packet Tracer</b><span data-i18n="tools.handsOn">Hands-on</span></div>
+      <div class="tool-card" role="button" tabindex="0" aria-label="IAM" data-brand="iam"><b>IAM</b><span data-i18n="tools.handsOn">Hands-on</span></div>
+      <div class="tool-card" role="button" tabindex="0" aria-label="Git / GitHub" data-brand="git"><b>Git / GitHub</b><span data-i18n="tools.learning">Learning</span></div>
     </div>
 
     <div class="reveal">
@@ -1262,7 +1363,6 @@
       </div>
       <div class="skill-panel" data-panel="tools">
         <div class="skill-list">
-          <div class="skill-chip"><span class="name">AWS Console</span><span class="level hands-on">Hands-on</span></div>
           <div class="skill-chip"><span class="name">Cisco Packet Tracer</span><span class="level hands-on">Hands-on</span></div>
           <div class="skill-chip"><span class="name">Git / GitHub</span><span class="level learning">To be added</span></div>
         </div>
@@ -1422,6 +1522,8 @@
     </div>
   </div>
 </footer>
+
+</main>
 
 <!-- CASE STUDY MODAL -->
 <div class="modal-overlay" id="modalOverlay">
@@ -1830,6 +1932,9 @@ const grid = document.getElementById('projGrid');
 PROJECTS.forEach((p,i)=>{
   const el = document.createElement('div');
   el.className = 'proj-card';
+  el.setAttribute('role', 'button');
+  el.setAttribute('tabindex', '0');
+  el.setAttribute('aria-label', p.title);
   el.dataset.id = p.id;
   el.dataset.cats = p.cats.join(' ');
   el.innerHTML = `
@@ -1850,12 +1955,16 @@ PROJECTS.forEach((p,i)=>{
   grid.appendChild(el);
 
   attachDepth(el);
-  el.addEventListener('click', ()=>{
+  const openProj = ()=>{
     /* small tactile settle before the card starts expanding */
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ openModal(p.id); return; }
     el.style.transition = 'transform .18s var(--ease)';
     el.style.transform = 'scale(.988)';
     setTimeout(()=>{ el.style.transition=''; el.style.transform=''; openModal(p.id); }, 130);
+  };
+  el.addEventListener('click', openProj);
+  el.addEventListener('keydown', e=>{
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openProj(); }
   });
 });
 
@@ -1900,11 +2009,12 @@ function openModal(id, opts){
   modalBody.scrollTop = 0;
   modalBody.innerHTML = `
     <div class="cs-topbar">
-      <button class="cs-btn ghost" onclick="closeModal()" aria-label="Back to projects">← <span>Back</span></button>
+      <button type="button" class="cs-btn ghost" onclick="closeModal()" aria-label="Back to projects">← <span>Back</span></button>
       <span class="cs-title">${p.title}</span>
-      <span class="cs-nav" style="display:flex; gap:8px;">
-        <button class="cs-btn" onclick="openModal('${prevId}')">←<span> Prev</span></button>
-        <button class="cs-btn" onclick="openModal('${nextId}')"><span>Next </span>→</button>
+      <span class="cs-nav" style="display:flex; align-items:center; gap:8px;">
+        <button type="button" class="cs-btn" onclick="openModal('${prevId}')" aria-label="Previous project">←<span> Prev</span></button>
+        <button type="button" class="cs-btn" onclick="openModal('${nextId}')" aria-label="Next project"><span>Next </span>→</button>
+        <button type="button" class="modal-close" onclick="closeModal()" aria-label="Close modal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
       </span>
     </div>
     <div class="cs-hero">
@@ -1952,8 +2062,8 @@ function openModal(id, opts){
         ${p.demo ? '<span class="btn-secondary" style="cursor:not-allowed; opacity:.7;">Live Demo</span>' : ''}
       </div>
       <div style="display:flex; gap:10px;">
-        <span class="btn-secondary" style="cursor:pointer;" onclick="openModal('${prevId}')">← Prev</span>
-        <span class="btn-secondary" style="cursor:pointer;" onclick="openModal('${nextId}')">Next Project →</span>
+        <button type="button" class="btn-secondary" style="cursor:pointer;" onclick="openModal('${prevId}')" aria-label="Previous project">← Prev</button>
+        <button type="button" class="btn-secondary" style="cursor:pointer;" onclick="openModal('${nextId}')" aria-label="Next project">Next Project →</button>
       </div>
     </div>
     </div>
@@ -2121,10 +2231,14 @@ document.querySelectorAll('.tab[role="button"]').forEach(tab=>{
     });
   });
   document.querySelectorAll('.tool-card').forEach(card=>{
-    card.addEventListener('click', ()=>{
+    const toggleTool = ()=>{
       const on = card.classList.contains('is-active');
       document.querySelectorAll('.tool-card.is-active').forEach(c=>c.classList.remove('is-active'));
       card.classList.toggle('is-active', !on);
+    };
+    card.addEventListener('click', toggleTool);
+    card.addEventListener('keydown', e=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggleTool(); }
     });
   });
 })();
